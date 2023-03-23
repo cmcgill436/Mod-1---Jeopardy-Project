@@ -11,3 +11,13 @@
   --'X' button that quits/let the player restart/get to the home screen to play the game
     -- ensure the game resets when it is exited out of.
 */
+
+//when question box is clicked, it will open up to a page that list a corresponding quesiion//
+const box = document.querySelector(".question");
+question.addEventListener("click", (e) => {
+  console.log("click");
+  questionClick();
+});
+function questionClick() {
+  console.log("click");
+}
