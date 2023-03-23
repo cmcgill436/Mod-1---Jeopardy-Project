@@ -9,22 +9,37 @@
   </head>
   <body>
     <main id="main">
-      <h1 id="title"><img src="images/title.jpg" alt="Jeopardy Title" /></h1>
+      <div id="title">
+        <img src="images/title.jpg" alt="Jeopardy Title" />
+      </div>
       <div id="selectors">
-        <button class="button" role="button">Player1</button>
+        <div class="playerContainer">
+          <div class="title">Players</div>
+          <div class="controls">
+            <span>
+              <button class="button" role="button" onclick="incrPlayers()">
+                <span>+</span>
+              </button>
+            </span>
+            <span id="numOfPlayers">1</span>
+            <span>
+              <button class="button" role="button" onclick="decrPlayers()">
+                <span>-</span>
+              </button>
+            </span>
+          </div>
+        </div>
         <br />
-        <br />
-        <button class="button" role="button">Player2</button>
-        <br />
-        <br />
-        <button
-          class="button"
-          onclick="location.href='html/gameboard.html'"
-          type="button"
-          role="button"
-        >
-          Play Now
-        </button>
+        <div class="startGame">
+          <button
+            class="button"
+            onclick="location.href='html/gameboard.html'"
+            type="button"
+            role="button"
+          >
+            Play Now
+          </button>
+        </div>
       </div>
       <!-- use for questions <audio autoplay="" src="audio/Think!.mp3"></audio> -->
     </main>

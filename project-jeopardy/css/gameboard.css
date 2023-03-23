@@ -20,10 +20,10 @@ main {
 
 .board {
   /* background-image: url(../images/blank-board.png); */
-  background-color: black;
+  background-color: #9cbad1, transparent;
   background-size: cover;
   display: flex;
-  width: 115vh;
+  width: 120vh;
   height: 100vh;
   flex-wrap: wrap;
   justify-content: center;
@@ -38,7 +38,7 @@ main {
 }
 
 .category {
-  background-color: white;
+  background-color: #d5d6e0;
   width: 105px;
   height: 70px;
   border: 1px solid silver;
@@ -48,8 +48,10 @@ main {
   border-width: 7px;
   font-family: copperplate;
   text-align: center;
-  font-weight: bolder;
-  font-size: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  word-wrap: break-word;
+  line-height: 1.6;
 }
 
 .question {
@@ -69,14 +71,16 @@ main {
 }
 
 .stats {
+  background: #d5d6e0;
+  display: flex;
+  border-radius: 15%;
+  width: 80vh;
+  height: 10vh;
   border: 1px solid;
   border-style: groove;
   border-color: silver;
   margin-top: 140px;
-  height: 50vh;
-  background-color: white;
+  /* background-color: white; */
   border-width: 7px;
-  width: 60vh;
-  height: 40vh;
-  /* opacity: ; */
+  padding: 15px;
 }
