@@ -20,6 +20,7 @@ main {
 
 .board {
   background-image: url(../images/blank-board.png);
+  /* background-color: #060ce9; */
   background-size: cover;
   display: flex;
   width: 130vh;
@@ -27,20 +28,36 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  line-height: 90px;
+  /* border: 1px solid silver;
+  border-radius: 15px;
+  border-style: groove;
+  border-color: silver;
+  border-width: 7px; */
+  font-size: 0;
 }
 
 .category {
   background-color: white;
   width: 120px;
-  height: 60px;
+  height: 70px;
   border: 1px solid silver;
   border-radius: 15px;
   border-style: groove;
   border-color: silver;
   border-width: 7px;
+  font-family: copperplate;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 30px;
 }
 
 .question {
+  color: white;
+  font-size: 50px;
+  font-family: copperplate;
+  text-align: center;
+  font-weight: bolder;
   width: 120px;
   height: 90px;
   border: 1px solid;
