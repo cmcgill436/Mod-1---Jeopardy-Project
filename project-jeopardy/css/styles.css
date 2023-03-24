@@ -1,7 +1,6 @@
 body {
   background-image: url(../images/background.jpg);
   background-color: #060ce9;
-  display: inline-block;
 }
 
 #title {
@@ -45,5 +44,4 @@ body {
   color: white;
   font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
   font-size: 18px;
-  margin-left: 200px;
 }

@@ -2,7 +2,8 @@ body {
   background-image: url(../images/jeopardybackground1.jpg);
   background-color: #060ce9;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  background-attachment: fixed;
 }
 
 main {
@@ -19,12 +20,11 @@ main {
 }
 
 .board {
-  /* background-image: url(../images/blank-board.png); */
   background-color: #9cbad1, transparent;
   background-size: cover;
   display: flex;
-  width: 120vh;
-  height: 100vh;
+  width: 110vh;
+  height: 85vh;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -35,12 +35,13 @@ main {
   border-color: silver;
   border-width: 7px;
   font-size: 0;
+  margin-top: 40px;
 }
 
 .category {
   background-color: #d5d6e0;
   width: 105px;
-  height: 70px;
+  height: 65px;
   border: 1px solid silver;
   border-radius: 15px;
   border-style: groove;
@@ -60,8 +61,8 @@ main {
   font-family: copperplate;
   text-align: center;
   font-weight: bolder;
-  width: 120px;
-  height: 90px;
+  width: 105px;
+  height: 70px;
   border: 1px solid;
   border-radius: 15px;
   border-style: groove;
@@ -75,12 +76,11 @@ main {
   display: flex;
   border-radius: 15%;
   width: 80vh;
-  height: 10vh;
+  height: 6vh;
   border: 1px solid;
   border-style: groove;
   border-color: silver;
   margin-top: 140px;
-  /* background-color: white; */
   border-width: 7px;
   padding: 15px;
 }
