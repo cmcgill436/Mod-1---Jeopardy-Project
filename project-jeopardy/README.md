@@ -2,17 +2,21 @@
 
 This project is a game modeled after the popuplar television game show.
 
-# Motivation
+## Motivation
 
 I chose to recreate this game because of the nostalgia surrounding it. Its a game my family enjoyed watching when I was younger. I also thought it would be a great tool to put to use presently in school or office settings.
 
-# Screenshots
+## Screenshots
 
 ![screenshot of the game set up page] (playscreen.png)
 
 ![screenshot of the gameboard] (inplay.png)
 
-# Code Example
+## Techology used
+
+This game was created using HTML, CSS, and Javascript.
+
+## Code Example
 
 ```
 valDiv.forEach((d) => {
@@ -22,7 +26,7 @@ valDiv.forEach((d) => {
       categories[Math.floor(a / 5)].questions[Math.floor(a % 5)].question;
 ```
 
-# Instructions
+## Instructions
 
 1. Select number of players
 
@@ -38,6 +42,18 @@ valDiv.forEach((d) => {
 
 - After 30 questions are completed you will receive your score.
 
-# Stretch Goals
+## Roadmap
+
+- Enabling multiplay function
 
 - A way to reset the board and play again
+
+- Add music
+
+- Include "Daily Double" question and "Final Jeopardy' round.
+
+- Enabling the user the ability to add their own categories and questions.
+
+## License
+
+MIT © cmcgill436
