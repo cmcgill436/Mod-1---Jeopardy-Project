@@ -84,7 +84,7 @@ const categories = [
     questions: [
       {
         question: "Inside which HTML element do we put the JavaScript",
-        answerChoices: ["<javascript", "<script>", "<js>", "scripting"],
+        answerChoices: ["<javascript>", "<script>", "<js>", "scripting"],
         correct: "<script>",
         value: "100",
       },
@@ -309,6 +309,9 @@ valDiv.forEach((d) => {
       document.querySelector("#questionDiv").appendChild(newEl3);
     });
     //scoring
+    document
+      .querySelector("#questionDiv")
+      .appendChild(document.createElement("br"));
     document
       .querySelector("#questionDiv")
       .appendChild(document.createElement("br"));

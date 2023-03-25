@@ -23,15 +23,14 @@ main {
   background-color: #9cbad1, transparent;
   background-size: cover;
   display: flex;
-  width: 118vh;
-  height: 88 vh;
+  width: 110vh;
+  height: 80vh;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   border: 1px solid silver;
   border-radius: 15px;
   border-style: groove;
-  border-color: silver;
   border-width: 7px;
   font-size: 0;
   margin-top: 40px;
@@ -41,11 +40,9 @@ main {
   background-color: #d5d6e0;
   width: 105px;
   height: 65px;
-  border: 1px solid silver;
+  border: 7px solid silver;
   border-radius: 15px;
   border-style: groove;
-  border-color: silver;
-  border-width: 7px;
   font-family: copperplate;
   text-align: center;
   font-weight: bold;
@@ -62,11 +59,9 @@ main {
   font-weight: bolder;
   width: 105px;
   height: 70px;
-  border: 1px solid;
+  border: 7px solid silver;
   border-radius: 15px;
   border-style: groove;
-  border-color: silver;
-  border-width: 7px;
   background-color: #060ce9;
 }
 
@@ -77,16 +72,17 @@ main {
   border-radius: 15%;
   width: 80vh;
   height: 30vh;
-  border: 1px solid;
+  border: 7px solid silver;
   border-style: groove;
-  border-color: silver;
   margin-top: 140px;
-  margin-left: 20px;
-  border-width: 7px;
   padding: 15px;
 }
 
 #score {
   color: #820d5c;
-  font-weight: bold;
+  font-weight: bolder;
+}
+
+p {
+  font-weight: bolder;
 }
