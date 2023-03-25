@@ -13,22 +13,21 @@ main {
 
 #gameboard {
   display: flex;
-  /* margin-top: 100px; */
   margin-left: 0;
   width: 250vh;
   justify-content: space-between;
 }
 
 .board {
+  /* background-image: url(../images/blank-board.png); */
   background-color: #9cbad1, transparent;
   background-size: cover;
   display: flex;
-  width: 110vh;
-  height: 85vh;
+  width: 118vh;
+  height: 88 vh;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  line-height: 90px;
   border: 1px solid silver;
   border-radius: 15px;
   border-style: groove;
@@ -74,13 +73,20 @@ main {
 .stats {
   background: #d5d6e0;
   display: flex;
+  flex-wrap: wrap;
   border-radius: 15%;
   width: 80vh;
-  height: 6vh;
+  height: 30vh;
   border: 1px solid;
   border-style: groove;
   border-color: silver;
   margin-top: 140px;
+  margin-left: 20px;
   border-width: 7px;
   padding: 15px;
+}
+
+#score {
+  color: #820d5c;
+  font-weight: bold;
 }

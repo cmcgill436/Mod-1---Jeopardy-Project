@@ -28,7 +28,6 @@ body {
   border: 0;
   font-size: 16px;
   user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
 }
 
@@ -44,4 +43,5 @@ body {
   color: white;
   font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
   font-size: 18px;
+  margin-top: 70px;
 }

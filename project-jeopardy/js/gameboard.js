@@ -1,8 +1,8 @@
 const gameboard = document.getElementById("gameboard");
-const stats = document.getElementById("statsDiv");
+const stats = document.querySelector(".stats");
 const valDiv = document.querySelectorAll(".question");
 const categoryEls = document.querySelectorAll(".category");
-const questionDiv = document.getElementById("questions");
+// const questionDiv = document.getElementById("questions");
 const categories = [
   {
     subject: "What the HTML?!", //man need to change to match the category
@@ -26,7 +26,7 @@ const categories = [
       {
         question:
           "What is the correct HTML element for inserting a line break?",
-        answerChoices: ["br", "<break", "<lb>", "&nbsp;"],
+        answerChoices: ["<br>", "<break", "<lb>", "&nbsp;"],
         correct: "<br>",
         value: "300",
       },
@@ -124,7 +124,7 @@ const categories = [
     ],
   },
   {
-    subject: "Are You Smarter Than a 7th Grader",
+    subject: "Are You Smarter Than a 7th Grader?",
     questions: [
       {
         question: "What are the three states of matter?",
@@ -265,43 +265,88 @@ const categories = [
 categoryEls.forEach(
   (category, i) => (category.textContent = categories[i].subject)
 );
-//prints value to question divs
-// function addvalue() {
-//   const columns = document.
 
-valDiv.forEach(
-  (value, i) => (value.textContent = categories[i].questions[i].value)
-);
+let k = 0;
+
+for (let q = 0; q < 6; q++) {
+  for (let j = 0; j < 5; j++) {
+    // let newValue = document.querySelector(`#question${k}`).textContent;
+    let newValue = categories[q].questions[j].value;
+    document.querySelector(`#question${k}`).textContent = newValue;
+    console.log(newValue);
+    k++;
+  }
+}
 
 // //click event that creates a div w/ the questions, answerChoices
+valDiv.forEach((d) => {
+  d.addEventListener("click", (evt) => {
+    a = evt.target.getAttribute("id").match(/[0-9]+/)[0];
+    document.querySelector("#questionDiv").textContent =
+      categories[Math.floor(a / 5)].questions[Math.floor(a % 5)].question;
 
-// button.addEventListener("click", (evt) => {
-//   const div = document.createElement("div");
-//   div.classList.add("popUp");
+    categories[Math.floor(a / 5)].questions[
+      Math.floor(a % 5)
+    ].answerChoices.forEach((v) => {
+      console.log(v);
+      const newEl2 = document.createElement("input");
+      const newEl3 = document.createElement("label");
+      newEl2.type = "radio";
+      newEl2.value = v;
+      newEl2.setAttribute(
+        "id",
+        `answer${categories[Math.floor(a / 5)].questions[
+          Math.floor(a % 5)
+        ].answerChoices.indexOf(v)}`
+      );
+      newEl2.setAttribute("name", "answer");
+      newEl3.setAttribute("for", newEl2.id);
+      newEl3.textContent = v;
+      document
+        .querySelector("#questionDiv")
+        .appendChild(document.createElement("br"));
+      document.querySelector("#questionDiv").appendChild(newEl2);
+      document.querySelector("#questionDiv").appendChild(newEl3);
+    });
 
-//   div.textContent = input.value;
-//   input.value = categories.question && categories.answerChoices;
-//   gameboard.appendChild();
-// });
+    document
+      .querySelector("#questionDiv")
+      .appendChild(document.createElement("br"));
+    const submit = document.createElement("input");
+    submit.setAttribute("type", "submit");
+    submit.setAttribute("value", "Submit");
+    submit.addEventListener("click", (evt) => {
+      if (
+        document.querySelector('input[name="answer"]:checked').value ==
+        categories[Math.floor(a / 5)].questions[Math.floor(a % 5)].correct
+      ) {
+        score +=
+          +categories[Math.floor(a / 5)].questions[Math.floor(a % 5)]["value"];
+        alert("You're correct!");
+        document.getElementById("score").textContent = score;
+        let quest = document.querySelector(`#question${a}`);
+        quest.textContent = "";
+        quest.style.backgroundColor = "green";
+      } else {
+        document.querySelector('input[name="answer"]:checked').value !==
+          categories[Math.floor(a / 5)].questions[Math.floor(a % 5)].correct;
+        alert("Wrong");
+        let quest = document.querySelector(`#question${a}`);
+        quest.textContent = "";
+        quest.style.backgroundColor = "red";
+      }
+      counter++;
+      if (counter == 30) {
+        alert(`Game over you scored ${score} pts.`);
+      }
+    });
+    document.querySelector("#questionDiv").appendChild(submit);
+  });
+});
 
 //score
 
-// const questionDiv = document.querySelector(".question");
-// const questionScore = (question) => question.innerText {
-//   let score
-
-//   if ( value == "100") {
-//     score = 100;
-//   } else if (value == "200") {
-//     score = 2value == "300") {
-//     score = 300;
-//   } else if (value == "400") {
-//     score = 400;
-//   } else if (value == "500") {
-//     score = 500;
-//   } else {
-//     //for incorrect answer
-//     score = 0;
-//   }
-//   return score;
-// };
+let score = 0;
+let a;
+// counter
+let counter = 0;
