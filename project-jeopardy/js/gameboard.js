@@ -74,7 +74,7 @@ const categories = [
       {
         question: "How many 'cents' are in a quarter?",
         answerChoices: ["5¢", "10¢", "25¢", "1¢"],
-        correct: "25",
+        correct: "25¢",
         value: "500",
       },
     ],
@@ -308,7 +308,7 @@ valDiv.forEach((d) => {
       document.querySelector("#questionDiv").appendChild(newEl2);
       document.querySelector("#questionDiv").appendChild(newEl3);
     });
-
+    //scoring
     document
       .querySelector("#questionDiv")
       .appendChild(document.createElement("br"));
