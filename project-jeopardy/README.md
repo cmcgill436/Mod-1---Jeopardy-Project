@@ -8,9 +8,9 @@ I chose to recreate this game because of the nostalgia surrounding it. Its a gam
 
 # Screenshots
 
-! [screenshot of the game set up page] (playscreen.png)
+![screenshot of the game set up page] (playscreen.png)
 
-! [screenshot of the gameboard] (inplay.png)
+![screenshot of the gameboard] (inplay.png)
 
 # Code Example
 
