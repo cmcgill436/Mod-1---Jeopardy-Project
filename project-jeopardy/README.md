@@ -1,14 +1,43 @@
-Jeopardy Project
+# Jeopardy
 
-This game is a intended to be a replica of the popuplar television game show. It is created using Javascript.
+This project is a game modeled after the popuplar television game show.
 
-Instructions
+# Motivation
 
-- Select number of players
-- Press Play
-- Once in the game, the game board will list 6 categories. Each with their question values below.
-- Select a value and a question box will pop up.
-- Within the box, you will have multiple choice question. You will select the radio button with the answer you want and press submit.
-  If correct, you will receive the points associated with the question box you initially selected.
-- The player with the highest score wins.
-  -An Exit button can be used to exit the game or and start over.
+I chose to recreate this game because of the nostalgia surrounding it. Its a game my family enjoyed watching when I was younger. I also thought it would be a great tool to put to use presently in school or office settings.
+
+# Screenshots
+
+! [screenshot of the game set up page] (playscreen.png)
+
+! [screenshot of the gameboard] (inplay.png)
+
+# Code Example
+
+```
+valDiv.forEach((d) => {
+  d.addEventListener("click", (evt) => {
+    a = evt.target.getAttribute("id").match(/[0-9]+/)[0];
+    document.querySelector("#questionDiv").textContent =
+      categories[Math.floor(a / 5)].questions[Math.floor(a % 5)].question;
+```
+
+# Instructions
+
+1. Select number of players
+
+2. Press Play
+
+3. Once in the game, the game board will list 6 categories. Each with their question values below them.
+
+4. Select a value and a question will pop up in the score box on the right.
+
+5. Within the box, you will have a multiple choice question. You will select the radio button with the answer you want and press submit.
+
+- If correct, you will receive the points associated with the question box you initially selected.
+
+- After 30 questions are completed you will receive your score.
+
+# Stretch Goals
+
+- A way to reset the board and play again
