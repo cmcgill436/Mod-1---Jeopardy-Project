@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-image: url(../images/jeopardybackground1.jpg);
   background-color: #060ce9;
@@ -7,25 +11,26 @@ body {
 }
 
 main {
-  display: flex;
-  height: 100vh;
+  height: 90vh;
 }
 
 #gameboard {
   display: flex;
   margin-left: 0;
-  width: 250vh;
-  justify-content: space-between;
+  width: 200vh;
+  height: 90vh;
 }
 
 .board {
   /* background-image: url(../images/blank-board.png); */
   background-color: #9cbad1, transparent;
   background-size: cover;
-  display: flex;
-  width: 110vh;
+  display: grid;
+  grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+  grid-template-rows: 1fr 5fr;
+  width: 108vh;
   height: 80vh;
-  flex-wrap: wrap;
+
   justify-content: center;
   align-items: center;
   border: 1px solid silver;
@@ -33,13 +38,15 @@ main {
   border-style: groove;
   border-width: 7px;
   font-size: 0;
-  margin-top: 40px;
+  margin-top: 90px;
+  margin-left: 30px;
+  margin-right: 20px;
 }
 
 .category {
   background-color: #d5d6e0;
-  width: 105px;
-  height: 65px;
+  width: 115px;
+  height: 80px;
   border: 7px solid silver;
   border-radius: 15px;
   border-style: groove;
@@ -57,8 +64,8 @@ main {
   font-family: copperplate;
   text-align: center;
   font-weight: bolder;
-  width: 105px;
-  height: 70px;
+  width: 115px;
+  height: 80px;
   border: 7px solid silver;
   border-radius: 15px;
   border-style: groove;
@@ -71,7 +78,7 @@ main {
   flex-wrap: wrap;
   border-radius: 15%;
   width: 80vh;
-  height: 30vh;
+  height: 40vh;
   border: 7px solid silver;
   border-style: groove;
   margin-top: 140px;
